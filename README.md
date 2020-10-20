@@ -83,5 +83,5 @@ like [`:fifo`] or [`:send`].
 [connect.kak]: https://github.com/alexherbo2/connect.kak
 [`connect-bspwm`]: rc/connect-bspwm.kak
 [`bspwm-repl`]: rc/bspwm-repl.kak
-[`fifo`]: https://github.com/alexherbo2/connect.kak/blob/master/rc/connect/commands/:fifo
+[`:fifo`]: https://github.com/alexherbo2/connect.kak/blob/master/rc/connect/commands/:fifo
 [`:send`]: https://github.com/alexherbo2/connect.kak/blob/master/rc/connect/commands/:send
