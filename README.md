@@ -14,7 +14,7 @@ programmed for [X] using bspwm features and add new specialized functionality.
 
 The initial targets are
 
-* Implementing a Kakoune command that spawns a window and return it's node ID
+* Implementing a Kakoune command that spawns a window and return its node ID
 to operate later on that window.
 
 ## Improvements over X11's module
@@ -25,24 +25,24 @@ to operate later on that window.
 After it stopped working with a recent update of my system for the traditional
 `:x11-send-text` command,
 I decided to replace the window management functionality with `bspc` and
-the key symulation with `xte`.
+the key simulation with `xte`.
 
 [`xdotool`]: https://github.com/jordansissel/xdotool
 [`xte`]: https://jlk.fjfi.cvut.cz/arch/manpages/man/xte.1
 
 * 2 new Kakoune options `%opt{replwin}` and `%opt{repl_ratio}` to manage the
-repl from Kakoune knowing it's WID and setting the default split ratio.
+repl from Kakoune knowing its WID and setting the default split ratio.
 
 * `:bspwm-send-text` works for bash.
 
 The implementation of `:x11-send-text` relies on setting the repl's window title.
-Unfortunately, some shells set the window title when loading the promt.
+Unfortunately, some shells set the window title when loading the prompt.
 You can disable this functionality by customizing the variable
 `PROMPT_COMMAND` in bash.
 bspwm.kak, on the other hand, works out of the box because
 the repl window is referenced through its node id.
 
-* `:bspwm-send-text` sends it's arguments or, if absent, the current selection.
+* `:bspwm-send-text` sends its arguments or, if absent, the current selection.
 
 ## Installation
 
