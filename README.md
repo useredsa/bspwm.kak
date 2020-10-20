@@ -53,7 +53,7 @@ Source the scripts inside [`rc`].
 ### Using @alexherbo2's [`plug.kak`](https://github.com/alexherbo2/plug.kak)
 
 ```kak
-plug bspwm tools/bspwm.kak %{
+plug bspwm https://github.com/useredsa/bspwm.kak %{
     set -add global windowing_modules bspwm
     require-module connect-bspwm
 }
