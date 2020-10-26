@@ -29,7 +29,8 @@ define-command -docstring %{
             printf "%s\\n" "$@" | xsel -i ||
             echo 'fail x11-send-text: failed to run xsel, see *debug* buffer for details'
         fi
-        bspc node $kak_opt_replwin --focus && xte <<EOF
+        # The quotes are important to catch a failure when the option is not set
+        bspc node "$kak_opt_replwin" --focus && xte <<EOF
 keyup Control_L
 keyup Control_R
 keyup Super_L
