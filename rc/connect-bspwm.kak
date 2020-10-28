@@ -1,5 +1,7 @@
 provide-module connect-bspwm %{
 
+require-module bspwm
+
 define-command -docstring %{
     bspwm-repl [<arguments>]: create a new connected window for repl interaction
     All optional parameters are forwarded to the new window
