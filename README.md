@@ -44,6 +44,8 @@ the repl window is referenced through its node id.
 
 * `:bspwm-send-text` sends its arguments or, if absent, the current selection.
 
+* New command `:bspwm-popup` spawns a floating terminal.
+
 ## Installation
 
 Source the scripts inside [`rc`].
@@ -68,20 +70,13 @@ plug "useredsa/bspwm.kak" %{
 }
 ```
 
-## Connect module
+## Connect Integration
 
 It is intended to maintain integration with [connect.kak] whenever it is useful,
 but it will always be optional.
 
-Currently, the module [`connect-bspwm`] reimplements the command [`bspwm-repl`]
-to use a connected terminal.
-The usage would be to spawn a connected shell with `:repl` and send commands
-from Kakoune to the terminal with `:send-text` and from the terminal to Kakoune
-with all the available commands [connect.kak] provides,
-like [`:fifo`] or [`:send`].
+Currently, `:bspwm-popup` is aliased to `popup` and
+will work with `:connect-popup`.
 
 [connect.kak]: https://github.com/alexherbo2/connect.kak
-[`connect-bspwm`]: rc/connect-bspwm.kak
-[`bspwm-repl`]: rc/bspwm-repl.kak
-[`:fifo`]: https://github.com/alexherbo2/connect.kak/blob/master/rc/connect/commands/:fifo
-[`:send`]: https://github.com/alexherbo2/connect.kak/blob/master/rc/connect/commands/:send
+

@@ -19,7 +19,15 @@ define-command -docstring %{
     }
 }
 
+define-command -docstring %{
+    bspwm-popup <program> [<arguments>]: spawn a new floating terminal
+} bspwm-popup -params 1.. -override -shell-completion %{
+    nop %sh{ bspc rule --add '*' --one-shot state=floating }
+    x11-terminal %arg{@}
+}
+
 alias global focus bspwm-focus
+alias global popup bspwm-popup
 
 }
 
