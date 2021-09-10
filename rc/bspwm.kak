@@ -5,6 +5,8 @@ evaluate-commands %sh{
     true #TODO
 }
 
+require-module x11
+
 define-command -docstring %{
     bspwm-focus [<kakoune_client>]: focus a given client's window
     If no client is passed, then the current client is used
