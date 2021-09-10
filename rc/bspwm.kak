@@ -28,8 +28,16 @@ define-command -docstring %{
   x11-terminal %arg{@}
 }
 
+define-command -docstring %{
+  bspwm-fullscreen <program> [<arguments>]: spawn a new fullscreen terminal
+} bspwm-fullscreen -params 1.. -shell-completion %{
+  nop %sh{ bspc rule --add '*' --one-shot state=fullscreen }
+  x11-terminal %arg{@}
+}
+
 alias global focus bspwm-focus
 alias global popup bspwm-popup
+alias global fullscreen bspwm-fullscreen
 
 }
 
